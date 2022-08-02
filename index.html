@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,253 @@
     <title>Document</title>
 
     <style>
-        .camaro{
-            width: 200px;
-            height: 200px;
+        * {
+            box-sizing: border-box;
         }
 
-        .camaro:hover{
-            transition: all 3s;
+        body {
+            margin: 0;
+            font-family: Segoe UI;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        header {
+            background-color: rgba(205, 220, 233, 255);
+            text-align: center;
+        }
+
+        .main-top {
+            padding: 15px;
+        }
+
+        .imgs {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .ph {
             width: 300px;
+        }
+
+        hr {
+            background-color: gray;
+            height: 5px;
+            color: gray;
+            width: 900px;
+        }
+
+        .information {
+            text-align: center;
+        }
+
+        .info {
+            padding: 0 70px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .charac{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .btn{
+            margin: 30px auto;
+            margin-bottom: 10px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            font-weight: bold;
+            width: 200px;
+            padding: 15px;
+            background-color: grey;
+            color: white;
+        }
+
+        .btn:hover{
+            background-color: rgba(205, 220, 233, 255);
+            color: black;
+        }
+
+        textarea{
+            resize: none;
+        }
+
+        footer p{
+            padding: 15px;
+            background-color: grey;
+            color: white;
+            margin: 0;
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
-    <h1>Hello world</h1>
-    <img class="camaro" src="images/camaro_79.jpg" alt="camaro">
+    <header>
+        <div class="container">
+            <div class="main-top">
+                <h1>Chevrolet Camaro Z28 1979</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="imgs">
+                    <div>
+                        <img class="ph" src="images/camaro.jpg">
+                    </div>
+                    <div>
+                        <img class="ph" src="images/camaro_inside.jpg">
+                    </div>
+                    <div>
+                        <img class="ph" src="images/camaro_rear.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="information">
+            <div class="container">
+                <hr>
+                <h2>History</h2>
+                <p>
+                    Chevrolet Camaro production for 1979 rose slightly to 282,571 units, as the attractively named
+                    Camaro
+                    Berlinetta replaced the Type LT. The Berlinetta was basically a stylish trim package, but proved
+                    quite popular, with 67,236 sold. Camaro production was divided between 21,913 six-cylinder cars and
+                    260,658 V-8 models. Prices ranged from $4,676 for a base six-cylinder Sport Coupe to $6,115 for the
+                    Z28, of which 84,877 were built. The models were simplified, with a Sport Coupe, Rally Sport Coupe,
+                    Berlinetta and Z28.
+                </p>
+                <hr>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <video muted loop autoplay width="1000">
+                    <source src="video/camaro.mp4" />
+                </video>
+            </div>
+        </section>
+
+        <section class="information_2">
+            <div class="container">
+                <hr>
+                <div class="info">
+                    <h3>Info</h3>
+                    <div class="charac">
+                        <div>
+                            <p><strong>Body styles:</strong></p>
+                            <ul>
+                                2dr Sport Coupe
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p><strong>Engine Types:</strong></p>
+                            <ul>
+                                8-cyl. 350cid/170hp 4bbl LM1
+                            </ul>
+                            <ul>
+                                8-cyl. 350cid/175hp 4bbl
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p><strong>Additional Info:</strong></p>
+                            <ul>
+                                Curb Weight: 3440 lbs.
+                            </ul>
+                            <ul>
+                                Vehicle Length: 197.6 in.
+                            </ul>
+                            <ul>
+                                Wheel Base: 108 in.
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="btn" href="https://www.hagertyagent.com/apps/valuationtools/1979-Chevrolet-Camaro-Z!28">More information</a>
+
+                <hr>
+            </div>
+        </section>
+        
+        <section class="contact_us">
+            <div class="container">
+                <fieldset>
+                    <legend>Contact us</legend>
+        
+                    <label for="user_name">Your name:</label>
+                    <input type="text" name="" placeholder="name" id="user_name">
+        
+                    <br>
+                    <br>
+        
+                    <label for="user_age">Your age:</label>
+                    <input type="number" name="user_age" id="user_age">
+                </fieldset>
+
+                <br>
+                <br>
+        
+                <input type="radio" name="gender" id="male">M
+                <input type="radio" name="gender" id="female">F
+        
+                <br>
+                <br>
+        
+                <label for="remember">Remember me</label>
+                <input type="checkbox" name="remember" id="remember">
+        
+                <br>
+                <br>
+        
+                <select name="city" id="">
+                    <option disabled selected>Choose the city</option>
+                    <option value="Lviv">Lviv</option>
+                    <option value="Kyiv">Kyiv</option>
+                    <option value="IF">IF</option>
+                </select>
+        
+                <br>
+                <br>
+        
+                <label for="message"></label>
+                <textarea id="message" name="message" cols="50" rows="4"></textarea>
+            
+                <br>
+                <br>
+        
+                <input type="submit" value="Submit">
+                
+                <br>
+                <br>
+                <br>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>by Yurii Nagorniak</p>
+    </footer>
+
 </body>
+
 </html>
